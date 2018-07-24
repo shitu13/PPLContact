@@ -1,0 +1,373 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:cardCornerRadius="5dp">
+
+
+        <RelativeLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/propic"
+                android:layout_width="200dp"
+                android:layout_height="150sp"
+                android:clickable="true"
+                android:onClick="ChangePhoto"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/profilepic"
+                app:civ_border_color="#ffffff"
+                app:civ_border_width="3dp" />
+
+
+            <ImageView
+
+                android:id="@+id/update"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginTop="34dp"
+                android:background="@color/colorPrimary"
+                android:hint="Submit"
+                android:src="@drawable/ic_cloud_done_black_24dp"
+                android:tint="@color/white" />
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_below="@+id/propic"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="cursive"
+                android:text="Edit Your Profile"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="650dp"
+
+                android:layout_marginTop="210dp">
+
+                <RelativeLayout
+                    android:id="@+id/rel1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp">
+
+
+                    <ImageView
+                        android:id="@+id/user"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/colorPrimary"
+                        android:contentDescription="@null"
+                        android:padding="8dp"
+                        android:src="@drawable/user"
+                        android:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/user_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_toRightOf="@+id/user"
+                        android:background="@color/grey"
+                        android:hint="Name"
+                        android:padding="10dp"
+                        android:textSize="15dp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rel1"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/designa"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/colorPrimary"
+                        android:contentDescription="@null"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_accessibility_black_24dp"
+                        android:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/Deisgnation"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_toRightOf="@+id/designa"
+                        android:background="@color/grey"
+                        android:hint="Designation"
+                        android:padding="10dp"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rel2"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/num"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/colorPrimary"
+                        android:contentDescription="@null"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_phone_iphone_black_24dp"
+                        android:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_toRightOf="@+id/num"
+                        android:background="@color/grey"
+                        android:hint="Phone Number"
+                        android:padding="10dp"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rel3"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgphone"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/colorPrimary"
+                        android:contentDescription="@null"
+
+                        android:padding="8dp"
+                        android:src="@drawable/telephone"
+                        android:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+
+                        android:layout_toRightOf="@+id/imgphone"
+                        android:background="@color/grey"
+                        android:hint="Telephone Number"
+                        android:padding="10dp"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rel4"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/email"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/colorPrimary"
+                        android:contentDescription="@null"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_email_black_24dp"
+                        android:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/mail"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_toRightOf="@+id/email"
+                        android:background="@color/grey"
+                        android:hint="Email Address"
+                        android:padding="10dp"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rel5"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/fbb"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/colorPrimary"
+                        android:contentDescription="@null"
+                        android:padding="8dp"
+                        android:src="@drawable/facebook"
+                        android:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/Fb"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_toRightOf="@+id/fbb"
+                        android:background="@color/grey"
+                        android:hint="Facbook.com/"
+                        android:padding="10dp"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rel6"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/brunch"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/colorPrimary"
+                        android:contentDescription="@null"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_home_black_24dp"
+                        android:tint="@color/white" />
+
+                    <Spinner
+                        android:id="@+id/Branch"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_toRightOf="@+id/brunch"
+                        android:background="@color/grey"
+                        android:padding="10dp"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rel8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rel7"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgwhtsapp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/colorPrimary"
+                        android:contentDescription="@null"
+                        android:padding="8dp"
+                        android:src="@drawable/whatsapp"
+                        android:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/editwhatsapp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_toRightOf="@+id/imgwhtsapp"
+                        android:background="@color/grey"
+                        android:hint="Whatsapp Number/"
+                        android:padding="10dp"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rel8"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgviber"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/colorPrimary"
+                        android:contentDescription="@null"
+                        android:padding="8dp"
+                        android:src="@drawable/viberedit"
+                        android:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/editviber"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_toRightOf="@+id/imgviber"
+                        android:background="@color/grey"
+                        android:hint="Viber Number"
+                        android:padding="10dp"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+    </ScrollView>
+
+
+</RelativeLayout>

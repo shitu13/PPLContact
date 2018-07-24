@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:padding="3dp">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/call"
+                android:layout_width="60dp"
+                android:layout_height="55dp"
+                android:padding="1dp"
+                android:src="@drawable/call" />
+
+            <ImageView
+                android:id="@+id/sms"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:contentDescription="@null"
+                android:padding="1dp"
+                android:src="@drawable/sms" />
+
+            <ImageView
+                android:id="@+id/mail"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:contentDescription="@null"
+                android:padding="1dp"
+                android:src="@drawable/mail" />
+
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+        <RelativeLayout
+            android:layout_below="@id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/fb"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="@null"
+                    android:padding="1dp"
+                    android:src="@drawable/facebook" />
+
+                <ImageView
+                    android:id="@+id/user"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="@null"
+                    android:padding="1dp"
+                    android:src="@drawable/user" />
+                <ImageView
+                    android:id="@+id/whtsapp"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="@null"
+                    android:padding="1dp"
+                    android:src="@drawable/whatsapp" />
+                <ImageView
+                    android:id="@+id/viber"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="@null"
+                    android:padding="1dp"
+                    android:src="@drawable/viber" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+
+</RelativeLayout>

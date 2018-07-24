@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/headoff2"
+        android:enabled="true"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Head Office"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/corpoff2"
+        android:enabled="true"
+        android:icon="@drawable/ic_domain_black_24dp"
+        android:title="Corporate Office"
+        app:showAsAction="ifRoom"/>
+
+
+
+    <item
+        android:id="@+id/selectAll"
+        android:enabled="true"
+        android:icon="@drawable/ic_select_all_black_24dp"
+        android:title="Select All"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/sendSms"
+        android:enabled="true"
+        android:icon="@drawable/ic_send_black_24dp"
+        android:title="Send SMS"
+        app:showAsAction="ifRoom"/>
+
+</menu>

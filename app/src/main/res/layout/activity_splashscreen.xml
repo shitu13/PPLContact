@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".splashscreen">
+
+    <ImageView
+        android:layout_width="260dp"
+        android:layout_height="180dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="99dp"
+        android:src="@drawable/ppllogo"/>
+
+    <TextView
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="215dp"
+        android:background="@color/colorRed"
+        android:text="PUSHPODHARA"
+        android:fontFamily="sans-serif-condensed"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="40sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="178dp"
+        android:text="Dreams will come true..."
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:fontFamily="cursive"
+        android:textStyle="bold"
+        android:textColor="@color/colorGray"/>
+
+</RelativeLayout>

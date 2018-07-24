@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "980629845706",
+    "firebase_url": "https://contactdemo-d2edd.firebaseio.com",
+    "project_id": "contactdemo-d2edd",
+    "storage_bucket": "contactdemo-d2edd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980629845706:android:1e9567d3c7f3f3ef",
+        "android_client_info": {
+          "package_name": "com.example.rowan.pplcontact"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "980629845706-8ruq5f58rass3n16kk6f50bd9q9sjppe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rowan.pplcontact",
+            "certificate_hash": "c8c921102a43e67cf7002507034fbb987825693c"
+          }
+        },
+        {
+          "client_id": "980629845706-o8mltin86j7fb038qtq4urv180qnimle.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_6HHjNEwWT5Wlmesf2XYMifMjgtHKySU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "980629845706-o8mltin86j7fb038qtq4urv180qnimle.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

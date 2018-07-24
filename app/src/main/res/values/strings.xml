@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PPL Contact</string>
+
+    <string-array name="Brunch">
+        <item>Head Office</item>
+        <item>Corporate Office</item>
+    </string-array>
+</resources>
