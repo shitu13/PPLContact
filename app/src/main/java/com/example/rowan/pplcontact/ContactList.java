@@ -3,6 +3,7 @@ package com.example.rowan.pplcontact;
 import android.app.Dialog;
 import android.app.SearchManager;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -99,9 +100,17 @@ public class ContactList extends AppCompatActivity {
                 if(item.getItemId()==R.id.sync)
                 {
                     //finish();
-                    SyncData syncData=new SyncData();
-                    syncData.getDataFromFirebase(ContactList.this);
-                    customAdapter.notifyDataSetChanged();
+                    if(isNetworkAvailable())
+                    {
+                        SyncData syncData=new SyncData();
+                        syncData.getDataFromFirebase(ContactList.this);
+                        customAdapter.notifyDataSetChanged();
+                    }
+                    else
+                    {
+                        Toast.makeText(ContactList.this,"Check Your Internet Connection",Toast.LENGTH_SHORT).show();
+                    }
+
 
                     return true;
                 }
@@ -196,8 +205,8 @@ public class ContactList extends AppCompatActivity {
                 final Dialog dialog=new Dialog(ContactList.this);
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 dialog.setContentView(R.layout.dialogue_options);
-                ImageView btnCall=(ImageView)dialog.findViewById(R.id.call);
-                ImageView    btnSms=(ImageView)dialog.findViewById(R.id.sms);
+                ImageView   btnCall=(ImageView)dialog.findViewById(R.id.call);
+                ImageView   btnSms=(ImageView)dialog.findViewById(R.id.sms);
                 ImageView   btnMail=(ImageView)dialog.findViewById(R.id.mail);
                 ImageView   btnFb=(ImageView)dialog.findViewById(R.id.fb);
                 ImageView   btnProfile=(ImageView)dialog.findViewById(R.id.user);
@@ -346,6 +355,13 @@ public class ContactList extends AppCompatActivity {
 
 
 
+    }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null;
     }
     public  void initImageloader()
     {

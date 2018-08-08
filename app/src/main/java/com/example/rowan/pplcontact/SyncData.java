@@ -128,8 +128,7 @@ public class SyncData extends Activity{
           filepath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
               @Override
               public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                  Uri download = taskSnapshot.getDownloadUrl();
-
+                  Uri download = Uri.parse(taskSnapshot.getMetadata().getReference().getDownloadUrl().toString());
                path  = download.toString();
                   reference.child("Image").setValue(path);
 
