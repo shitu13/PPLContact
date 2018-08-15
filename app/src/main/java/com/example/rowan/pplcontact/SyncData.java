@@ -5,9 +5,13 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.annotation.NonNull;
 import android.util.Log;
 
+import com.google.android.gms.tasks.Continuation;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -124,18 +128,33 @@ public class SyncData extends Activity{
 
           FirebaseStorage storage = FirebaseStorage.getInstance();
           StorageReference  storageReference = storage.getReference();
-          StorageReference filepath = storageReference.child(empid).child(uri.getLastPathSegment());
-          filepath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+          final StorageReference filepath = storageReference.child(empid).child(uri.getLastPathSegment());
+
+          Task<Uri> urlTask = filepath.putFile(uri).continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
               @Override
-              public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                  Uri download = Uri.parse(taskSnapshot.getMetadata().getReference().getDownloadUrl().toString());
-               path  = download.toString();
-                  reference.child("Image").setValue(path);
+              public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
+                  if (!task.isSuccessful()) {
+                      throw task.getException();
+                  }
 
+                  // Continue with the task to get the download URL
+                  return filepath.getDownloadUrl();
+              }
+          }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+              @Override
+              public void onComplete(@NonNull Task<Uri> task) {
+                  if (task.isSuccessful()) {
+                      Uri downloadUri = task.getResult();
+                      path  = downloadUri.toString();
+                      reference.child("Image").setValue(path);
 
-
+                  } else {
+                      // Handle failures
+                      // ...
+                  }
               }
           });
+
       }
       else
       {
